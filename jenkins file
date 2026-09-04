@@ -1,2 +1,23 @@
-Hello jenkins 
-this is my new project for github
+pipeline {
+    agent any
+
+    stages {
+        stage('Welcome') {
+            steps {
+                echo 'Hello! Jenkins is working.'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Building project...'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploy completed!'
+            }
+        }
+    }
+}
